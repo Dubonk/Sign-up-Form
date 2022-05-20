@@ -22,13 +22,19 @@ label {
 .inputs {
     display: flex;
     flex-direction: column;
-    flex: 1;
-}
-input {
-    border-radius: 8px;
-    border-color: rgb(179, 177, 177);
     width: 300px;
 }
+input {
+    border-radius: 5px;
+    border-style: solid;
+    border-width: .5px;
+    border-color: rgb(199, 198, 198);
+    width: 300px;
+}
+input:focus {
+    box-shadow: 3px 3px 3px grey;
+}
+
 .left {
     height: 100vh;
     width: 30%;
@@ -67,19 +73,23 @@ input {
     font-size: x-large;
     padding-left: 50px;
     width: 1350px;
+    gap: 30px;
     
 }
 #userInput {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
     background-color: white;
     box-shadow: 0px 1px 3px gray;
     flex: 1;
     padding-left: 50px;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+table {
+    height: 100%;
+    width: 40%;
+    column-gap: 20px;
 }
 #bottom {
     flex: 1;
@@ -95,9 +105,18 @@ input {
     border: 0px;
     border-radius: 8px;
 }
+#btn:hover {
+    background-color: #404e34;
+}
+a:hover {
+    color: #404e34;
+}
 .login {
     padding-top: 30px;
 }
 img {
     max-height: 100vh;
+}
+.inputs:invalid {
+    border-color: red;
 }
